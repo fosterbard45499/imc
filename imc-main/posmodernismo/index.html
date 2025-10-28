@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule seu IMC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <ion-content id="tela1" class="tela ativa">
+        <!-- <form id="formUsuario"> -->
+            <ion-item>
+            <ion-input id="nome" label="Nome" labelPlacement="floating" placeholder=""></ion-input>
+            </ion-item>
+
+            <ion-item>
+            <ion-input id="peso" label="Peso(Kg)" labelPlacement="floating" step="0.1" placeholder=""></ion-input>
+            </ion-item>
+
+            <ion-item>
+            <ion-input id="altura" label="Altura(m)" labelPlacement="floating" step="0.1" placeholder=""></ion-input>
+            </ion-item>
+
+            <ion-item>
+            <ion-select id="genero" justify="start" interface="popover" label="Gênero" placeholder="Selecione seu gênero">
+                <ion-select-option value="masculino">Masculino</ion-select-option>
+                <ion-select-option value="feminino">Feminino</ion-select-option>
+            </ion-select>
+            </ion-item>
+
+            <ion-button type="button" onclick="mostrarTela('Resultado')">Calcular</ion-button>
+      <!--  </form> -->
+    </ion-content>
+
+
+    <ion-content id="Resultado" class="tela">
+            <h2>Resultado do IMC</h2>
+            <p id="resultadoIMC"></p>
+      <ion-button type="button" onclick="mostrarTela('Form')">Voltar</ion-button>
+    </ion-content>
+
+    <ion-content id="tela3" class="tela">
+        <h1>TELA 3</h1>
+        <ion-button expand="block" onclick="mostrarTela('tela1')">Voltar para Tela 1</ion-button>
+        <ion-button expand="block" onclick="mostrarTela('tela2')">Ir direto para Tela 2</ion-button>
+    </ion-content>
+</body>
+</html>
